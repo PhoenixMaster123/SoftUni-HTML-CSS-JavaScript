@@ -1,0 +1,21 @@
+h1 {
+    color: red;
+}
+p {
+    font-size: 32px;
+}
+.highlight {
+    background-color: bisque;
+}
+#main-title {
+    color: aquamarine;
+}
+#special-paragraph {
+    font-style: italic;
+}
+ul {
+    list-style-type:lower-alpha;
+}
+li {
+    color: rgb(217, 18, 207);
+}
