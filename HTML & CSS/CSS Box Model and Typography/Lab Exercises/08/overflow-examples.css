@@ -1,0 +1,31 @@
+div {
+    border: 2px solid black;
+    width: 300px;
+    height: 100px;
+    padding: 1em;
+}
+
+.visible {
+    overflow: visible; /* The content go out of the box (Overflow content is not clipped and may be visible outside the element's padding box.)*/
+}
+.hidden {
+    overflow: hidden; /* The content don't go out of the box but cannot be seen the whole content. (Overflow content is clipped at the element's padding box. There are no scroll bars, and the clipped content is not visible (i.e., clipped content is hidden), but the content still exists.)*/
+}
+.scroll {
+    overflow: scroll; /* The content can be scrolled (Overflow content is clipped at the element's padding box, and overflow content can be scrolled into view using scroll bars.)*/
+}
+
+/*
+The overflow CSS shorthand property sets the desired behavior when content does not fit 
+in the element's padding box (overflows) in the horizontal and/or vertical direction 
+*/
+
+/* 
+   overflow: auto 
+
+   Overflow content is clipped at the element's padding box, and overflow content 
+   can be scrolled into view using scroll bars. 
+   Unlike scroll, user agents display scroll bars only if the content is overflowing. 
+   If content fits inside the element's padding box, it looks the same as with visible 
+   but still establishes a new formatting context. The element box is a scroll container.
+*/
