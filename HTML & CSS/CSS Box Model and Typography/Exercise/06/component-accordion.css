@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    font: 14px/1.5 Verdana, sans-serif;
+}
+body {
+    background-color: rgb(255, 255, 255);
+}
+div {
+    border: 1px solid rgb(227, 217, 217);
+    margin: auto; 
+    margin-top: 2em;
+    padding: 1em;
+    max-width: 50%;
+    display: block;
+}
+div section.block {
+    border: 1px solid #e3d8d8;
+    margin-bottom: 1em; 
+}
+p {
+    margin: 1em;
+    margin-bottom: 2em;
+}
+.arrow {
+    margin: 1em;
+}

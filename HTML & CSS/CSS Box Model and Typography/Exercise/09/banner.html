@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #eee;
+        }
+        .container {
+            max-width: 800px;
+            margin: 4em auto;
+            background: white;
+        }
+        .banner {
+            aspect-ratio: 2/1;
+            background-image: url(images/image1.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 12em 4em 4em;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .banner::after {
+            display: block;
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section class="banner">
+            <div>
+                <h1>The Fancy Lounge</h1>
+                <p>A place for relaxation and engaging conversation</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
