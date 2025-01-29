@@ -1,0 +1,35 @@
+body::before {
+    padding: 1em 1.5em;
+    margin-bottom: 2em;
+    border-radius: 0.3em;
+    Background-color: #369;
+    color: #fff
+}
+
+@media (hover: none) {
+        body::before {
+            display: block;
+            content: 'This device doesnt support hover';
+    }
+}
+
+@media (orientation: landscape) {
+        body::before {
+            display: block;
+            content: 'The device is in landscape orientation';
+    }
+}
+
+@media (width: 600px) { /* Is it better if we use max-width/min-height */
+        body::before {
+            display: block;
+            content: 'The viewport width is 600px';
+    }
+}
+
+@media (height: 800px) { /* Is it better if we use max-height/min-height */
+        body::before {
+            display: block;
+            content: 'The viewport height is 800px';
+    }
+} 

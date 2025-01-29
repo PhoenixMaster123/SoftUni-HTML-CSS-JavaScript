@@ -1,0 +1,21 @@
+body::before {
+    padding: 1em 1.5em;
+    margin-bottom: 2em;
+    border-radius: 0.3em;
+    Background-color: #369;
+    color: #fff
+}
+
+@media (min-width: 800px) and (max-width: 1200px) { /* if go less than 800px or more than 1200px it will not show */
+    body::before {
+        display: block;
+        content: 'The viewport width is larger than 800px and smaller than 1200px';
+    }
+}   
+
+@media not (max-width: 1200px) {
+    body::before {
+        display: block;
+        content: 'The viewport width is larger than 1200px';
+    }
+}   
