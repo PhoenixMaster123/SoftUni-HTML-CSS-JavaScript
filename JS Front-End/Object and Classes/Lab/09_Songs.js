@@ -25,7 +25,6 @@ function solve(array) {
        
         for (entry of map.entries()) {
             let value = entry[1];
-            let type = value.typeList;
             if(value.typeList == filterCondition) {
                 console.log(value.name);
             }
