@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="updateDOM()">Update DOM</button>
+    <script>
+        let myHeading = document.createElement('h1');
+        let myDiv = document.createElement('div');
+        let myPar = document.createElement('p')
+
+        myDiv.appendChild(myPar);
+
+        document.body.appendChild(myHeading);
+        document.body.appendChild(myDiv);
+
+
+        function updateDOM() {
+            myHeading.textContent = 'DOM Manipulation Demo';
+            myPar.textContent = 'Hello there, created from Script';
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myBtn">Create counter</button>
+    <script>
+        document.getElementById('myBtn').addEventListener('click', createCounter);
+        function createCounter() {
+            let btn = document.createElement('button');
+            btn.textContent = '0';
+            document.body.appendChild(btn);
+            btn.addEventListener('click', increment2)
+        }
+
+        // Variant 1:
+        function increment1(e) {
+            let btn = e.target;
+
+            let currenValue = Number(btn.textContent);
+            currenValue++;
+            btn.textContent = currenValue;
+        }
+
+        // Variant 2:
+        function increment2(e) {
+            let currenValue = Number(this.textContent);
+            currenValue++;
+            this.textContent = currenValue;
+        }
+
+    </script>
+</body>
+</html>
