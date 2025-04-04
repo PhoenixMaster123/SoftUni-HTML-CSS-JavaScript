@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async demo</title>
+</head>
+<body>
+    <button onclick="getData(event)">Click to Get Data</button>
+    <button onclick="doStuff()">Click to Do Other Stuff</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+         function doStuff() {
+          document.body.append('.')
+        }
+        function getData(ev) {
+
+            ev.target.disabled = true;
+            let loader = document.createElement('tr');
+            loader.innerHTML = '<td colSpan="2">Loading......</td>';
+            document.querySelector('tbody').replaceChildren(loader);
+
+            // First paramer => from where we want to take the data
+            // fetch returns promise
+            // then => callback (event listener)
+            let myPromise = fetch('https://swapi.dev/api/people');
+
+            myPromise
+            .then((res) => res.json())
+            .then(showData)
+            .catch((err) => console.error(err));
+        }
+        function showData(data) {
+            let tbody = document.querySelector('tbody');
+            tbody.replaceChildren();
+            for (let person of data.results) {
+            let row = document.createElement('tr');
+            row.innerHTML = `<td>${person.name}</td><td><a href="${person.url}">${person.url}</a></td>`;
+
+            tbody.appendChild(row);
+           }
+        }
+    </script>
+</body>
+</html>
